@@ -2,13 +2,13 @@
 
 /*
 * Name:     ALI ABDULLAH AHMAD
-* CWID:     20031246
+* CWID:     200
 */
 
-public class Assignment1_1 {
+public class Assignment01 {
     public static double calculateTriArea(double a, double b, double c) {
         
-        double s = (a+b+c)/2f;
+        double s = (a+b+c)/2;
         double area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
 
     return area;
