@@ -1,0 +1,254 @@
+\documentclass{article}%
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{arydshln}
+\usepackage{booktabs}
+
+%-------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\setlength{\textwidth}{7.0in}
+\setlength{\oddsidemargin}{-0.35in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9.0in}
+\setlength{\parindent}{0.3in}
+
+
+\begin{document}
+
+\begin{flushleft}
+\textbf{Instructor: Nikhil Muralidhar \\
+\today}
+\end{flushleft}
+
+\begin{center}
+\textbf{\Large CS 556-B: Mathematical Foundations of Machine Learning \\
+Homework 1: Linear Algebra (100 points)} \\
+\vspace{2ex}
+Note: All solutions methods must be fully explained. If a problem requires you to submit your code (this will be explicitly mentioned in the question), please ensure that your code (in the form of a jupyter notebook) is developed in a python3 environment and appropriately commented.
+\end{center}
+
+\section*{Vectors}.
+\begin{enumerate}
+    \item (1 point) Find the magnitude of the vector $\mathbf{x}$ = $\begin{bmatrix} 
+    1 \\ -3 \\ 8 \\ -5 \\ -1  \end{bmatrix}$\vspace{2ex}\\
+
+    \vspace{2ex}
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+    
+    \item (2 points) Consider two vectors represented by the set 
+    S = \bigg\{$\,\begin{bmatrix} 2\\ 4 \end{bmatrix}$\,, $\begin{bmatrix} 4\\ 8 \end{bmatrix}\,$\bigg\} (with each in vector space $\mathbb{R}^2$). What is the span of $S$ ? Does the vector $\begin{bmatrix} 20\\ 4 \end{bmatrix}$ belong to the span of two vectors. Briefly explain your reasoning leveraging the definition of the \emph{span} of a set of vectors. \vspace{2ex}\\
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+\end{enumerate}
+
+\section*{Dot Product}
+\begin{enumerate}
+  \setcounter{enumi}{2}
+    \item (2 points) If two vectors \textbf{a}, \textbf{b} have magnitudes 10 and 6 respectively and the angle between them is $\frac{\pi}{3}$ radians, what is their dot product?
+    
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+    
+    \item (2 points) Let vector $\mathbf{u} = \begin{bmatrix} 5\\ -3 \end{bmatrix}$  $\mathbf{v} = \begin{bmatrix}2\\ 1\end{bmatrix}$ , calculate the dot product of \textbf{u} and \textbf{v} also calculate the angle between (i.e., not the cosine of the angle but the actual angle in radians or degrees) \textbf{u} and \textbf{v}. \\
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+\end{enumerate}
+
+\section*{Linear Independence}
+\begin{enumerate}
+  \setcounter{enumi}{4}
+    \item  (3 points) Check if the vectors $\mathbf{x}$ = $\begin{bmatrix} 
+    1 \\ 4 \\ 3 \end{bmatrix}$, $\mathbf{y}$ = $\begin{bmatrix} 
+    1 \\ 3 \\ 5 \end{bmatrix}$, $\mathbf{z}$ = $\begin{bmatrix} 
+    1 \\ -1 \\ 3 \end{bmatrix}$
+    
+    are linearly independent. 
+    Note: The condition for linear independence is that given a set $S$ of vectors $\mathbf{x},\mathbf{y},\mathbf{z}$ and coefficients $a, b, c$, $a \mathbf{x} + b \mathbf{y} + c \hspace{0.25ex}\mathbf{z} = 0$ if and only if $a = b = c = 0$.\vspace{2ex}
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+    
+    \item (10 points) Given a subset of vectors $S = \{\mathbf{x}_1,\mathbf{x}_2,..,\mathbf{x}_k\}$ for $k \in \mathbb{N}$ of a vector space $V$, prove that $S$ is linearly independent iff a linear combination of elements of $S$ with non-zero coefficients does not yield \textbf{0}. \textbf{Hint}: To prove \textit{iff} statements, i.e., A \textbf{iff} B (A $\iff$ B), first prove A $\rightarrow$ B, then prove B $\leftarrow$ A.
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+\end{enumerate}
+
+\section*{Matrices}
+\begin{enumerate}
+  \setcounter{enumi}{6}
+    \item (3 points) Demonstrate the distributive property of matrix multiplication over addition. 
+    
+    Given $A = \begin{bmatrix}  -1 & 5 \\ -7 & 3\end{bmatrix}$, $B = \begin{bmatrix}  2 & -3 \\ 1 & 8\end{bmatrix}$, $C = \begin{bmatrix}  3 & 7 \\ -4 & 8\end{bmatrix}$, demonstrate: A(B+C) = AB + AC \vspace{2ex} 
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+
+   \item (10 points) Calculate the inverse of matrix $A =  \begin{bmatrix}  1 & -3 & 3 \\ 8 & 5 & -2 \\ -4 & 7 & 2\end{bmatrix}$. Note: It is acceptable to leave the final solution with fractional entities in the matrix (i.e., no requirement to convert fractions to decimal numbers).\vspace{2ex}
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+   
+\end{enumerate}
+
+\section*{Change of Bases}
+\begin{enumerate}
+  \setcounter{enumi}{8}
+    \item (10 points) Consider the three columns in matrix $A$ (problem 8) to be our new basis of interest in $R^3$. If a vector $\mathbf{x} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$ defined on the natural basis in $R^3$ (i.e.,  $\mathbf{e_1} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}$, $\mathbf{e_2} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}$, $\mathbf{e_1} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}$), how would vector \textbf{x} be represented in the basis defined by the matrix $A$ in problem 8 ?\vspace{2ex}
+    
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+\end{enumerate}
+
+\section*{Matrices}.
+\begin{enumerate}
+    \setcounter{enumi}{9}
+    \item (3 points) Which of the following matrices (without being altered) is in Reduced Row Echelon Form (RREF)? For matrices that are not in RREF (if any) please state ALL the violations due to which they are not in RREF.\vspace{1ex}
+
+    \begin{gather*}
+        A_1 = 
+        \begin{bmatrix}
+            2 & 0 & 0\\
+            0 & 0 & 0\\
+            0 & 1 & 0\\
+        \end{bmatrix}
+        \hspace{5ex}
+        A_2 =
+        \begin{bmatrix}
+            1 & 0 & -4\\
+            0 & 1 & 8\\
+            0 & 0 & 0\\
+        \end{bmatrix}
+        \hspace{5ex}
+        A_3 =
+        \begin{bmatrix}
+            1 & 0 & 1\\
+            0 & 1 & 0\\
+            0 & 0 & 1\\
+        \end{bmatrix}
+    \end{gather*}
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+
+    \item (4 points) What is the rank of each matrix below? Demonstrate intermediate steps employed to obtain the rank?
+    \begin{enumerate}
+        \item $A_1 =\begin{bmatrix}
+            1 & 0 & 0\\
+            0 & 1 & 0\\
+            0 & 0 & 1\\
+           \end{bmatrix}$
+        \item $A_2 =\begin{bmatrix}
+            4 & -1 & 9\\
+            1 & 4 & 4\\
+            0 & 0 & 1\\
+           \end{bmatrix}$
+    \end{enumerate}
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+    
+\end{enumerate}
+\section*{Subspaces \& Projections}
+\begin{enumerate}
+    \setcounter{enumi}{11}
+        \item (5 points) If a matrix of dimensions $5 \times 9$ has rank 3, what are the dimensions of the 4 fundamental subspaces (i.e., row space, column space, null space, left null space)? What is the sum of all 4 dimensions i.e., add the dimension of each subspace and report the total?
+
+         %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+        
+        \item (5 points) If a $4 \times 5$ matrix has rank 4, what are the dimensions of its columnspace (e.g., which of $\mathbb{R}^{1}$,$\mathbb{R}^{2}$,...$\mathbb{R}^{n}$ represents the column space) and left nullspace (i.e., for a matrix $A_{m\times n}$, the left null space is the set of all vectors $\mathbf{x}$ such that $A^T\mathbf{x} = 0$)?
+
+        %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+    
+    \item (10 points) Find the set of vectors that form the null space of the matrix\hspace{0.4ex}
+       $A =  \begin{bmatrix}
+        3 & 3 & 3 & 3 \\
+        5 & 4 & 3 & 2 \\
+        3 & 3 & 4 & 1
+    \end{bmatrix}$
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+    
+    \item (10 points) Find the \emph{complete} set of solutions for the system of linear equations (Ax=b) defined below:
+
+    \begin{align*}
+        x_1 -2x_2 -2x_3 &= b_1\\
+        2x_1 - 5x_2 -4x_3 &= b_2\\
+        4x_1 - 9x_2 -8x_3 &= b_3
+    \end{align*}
+
+    Note: First find the solution(s) that satisfy the \emph{column space} relationship, then find the set of solutions to the null space and add the two to obtain the final solution.
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+    \item (10 points) Calculate the Projection of \emph{$\mathbf{b}$} onto the column space defined by matrix A.  In each case, also calculate the magnitude of the vector from $\mathbf{b}$ perpendicular to the projection.
+    \begin{enumerate}
+        \item $A = \begin{bmatrix}
+            1 & 1\\
+            0 & 1\\
+            0 & 0
+        \end{bmatrix}\hspace{4ex}
+        b = \begin{bmatrix}
+            2\\
+            5\\
+            7
+        \end{bmatrix}$
+        
+        \item $A = \begin{bmatrix}
+            1 & 1\\
+            1 & 1\\
+            0 & 1
+        \end{bmatrix}\hspace{4ex}
+        b = \begin{bmatrix}
+            3\\
+            3\\
+            7
+        \end{bmatrix}$
+    \end{enumerate}
+
+    %%%%%%%%% Answers Here %%%%%%%%%%%%%%%
+
+
+    \item (10 points) Suppose matrix M is defined as follows:
+    $M = \begin{bmatrix}
+            1 & 0 & 4\\
+            2 & 3 & 4\\
+            0 & -1 & 2
+        \end{bmatrix}$
+    Convert the matrix to form an equivalent orthonormal basis via. \textbf{orthogonolization} using the Gram-Schmidt procedure.
+
+    %%%%%%%%% Answer Here %%%%%%%%%%%%%%%
+
+    
+\end{enumerate}
+
+\end{document}
