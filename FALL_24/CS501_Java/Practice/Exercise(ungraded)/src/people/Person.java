@@ -1,9 +1,11 @@
 package people;
+import java.util.Calendar;
 
-public class Person {
+class Person {
     
     private String name, address ;
     private int yearOfBirth;
+    Calendar now = Calendar.getInstance();
 
     public Person(){
         name = "NA";
@@ -38,7 +40,8 @@ public class Person {
     }
 
     public boolean canVote(){
-        return (2024 - yearOfBirth) >= 18;
+
+        return (now.getTime() - yearOfBirth) >= 18;
     }
 
 }
