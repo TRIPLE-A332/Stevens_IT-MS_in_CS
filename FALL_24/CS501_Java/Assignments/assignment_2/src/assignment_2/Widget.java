@@ -2,8 +2,8 @@ package assignment_2;
 
 /**
  * Widget class that models a sellable widget.
- * Author: [Your Name]
- * CWID: [Your CWID]
+ * Author: Ali Abdullah Ahmad
+ * CWID: 20031246
  */
 public class Widget {
     // Data fields
