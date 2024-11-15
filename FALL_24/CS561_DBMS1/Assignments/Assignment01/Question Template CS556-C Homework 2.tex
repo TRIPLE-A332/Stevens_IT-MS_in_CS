@@ -1,0 +1,201 @@
+\documentclass{article}%
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{arydshln}
+\usepackage{booktabs}
+
+%new commands %%%%%%%%%%%%%
+\newcommand{\nikhilc}[1]{\textcolor{red}{#1}}
+\newcommand{\answer}[1]{\textcolor{blue}{#1}}
+
+%-------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\setlength{\textwidth}{7.0in}
+\setlength{\oddsidemargin}{-0.35in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9.0in}
+\setlength{\parindent}{0.3in}
+
+\newcommand{\hinthide}[1]{}
+
+\begin{document}
+
+\begin{flushleft}
+\textbf{Instructor: Nikhil Muralidhar \\
+\today}
+\end{flushleft}
+
+\begin{center}
+\textbf{\Large CS 556-C: Mathematical Foundations of Machine Learning \\
+Homework 2: Linear Algebra, Dimensionality Reduction, Probability \& Differential Calculus (100 points)} \\
+\vspace{2ex}
+Note: All solutions methods must be fully explained. If a problem requires you to submit your code, please ensure that your code (in the form of a jupyter notebook) is developed in a python3 environment and appropriately commented.
+\end{center}
+
+\section*{Eigenvalues \& Eigenvectors, PCA \& SVD (25 points)}
+
+\begin{enumerate}
+    \setcounter{enumi}{0}
+    \item (5 points) Diagonalize the matrix 
+    $\begin{bmatrix}
+        1 \ \ \ & 2\\
+        4 \ \ \ & 3
+    \end{bmatrix}$
+    Please arrange the eigenvalues in descending order while constructing the diagonal matrix.
+    
+    \item (5 points) Calculate the Singular Value Decomposition of matrix
+    $A = \begin{bmatrix}
+        2 & 3\\
+        3 & 2
+    \end{bmatrix}$.
+    
+    Demonstrate each step in the computation and order the singular values in descending order in the $\Sigma$ matrix.
+    
+    \item (8 points) Recommendation System (SVD)
+    
+    \begin{table}[!ht]
+        \centering
+        \begin{tabular}{|c|c|c|c|c|c|}
+             \toprule
+              & Rambo & Top-Gun & Harry Potter& Amelie & Casablanca \\\hline
+             User 1&5.0&4.5&-&-&1.0\\\hline
+             User 2&-&-&2.5&5.0&5.0\\\hline
+             User 3&4.0&4.5&-&-&-\\\hline
+             User 4&-&1.5&4.5&-&-\\\hline
+             User 5&1.0&-&-&4.0&5.0\\\hline
+             User 6&-&-&4.5&-&-\\ \hline
+        \end{tabular}
+        \caption{Rating Matrix}
+        \label{tab:rating matrix}
+    \end{table}
+    
+    Table~\ref{tab:rating matrix} showcases user preferences of various movies. The rating scale is from 1 - 5 where 1 indicates a strong dislike of the movie while 5 indicates that the user has a strong liking for the movie. Some ratings have been masked (`-' symbol) and it is your task to re-create these ratings from the `U',`V',`S' matrices provided (as numpy arrays stored on disk to be read and processed via. a python script).
+    
+    \begin{enumerate}
+        \item (1 point) What is U1's `estimated' rating of the movie \emph{Amelie}?
+        \item (2 point) What is the \emph{strength} of concept 1 in the SVD decomposition?
+        \item (1 point) What is the average rating for movie Harry Potter across all users in the system (i.e., if actual ratings exist, use them if not use estimated ratings)?
+        \item (1 point) What is the movie with the overall highest rating (i.e., if actual ratings exist, use them if not use estimated ratings)?
+        \item (3 points) Please include your code, as a python3 jupyter notebook file named: 
+        
+        `$<$lastname$>$\_$<$firstname$>$\_svd.ipynb'. All visualizations and answers should be printed in the notebook (in addition to including only the answers in the assignment for this question).
+    \end{enumerate}
+    
+    \item (7 points) Calculate the principle component analysis of the \href{https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html}{Iris} dataset using the \href{https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html}{built-in method from Scikit-learn} and showcase the following.
+    \begin{enumerate}
+        \item (1 point) Include a 2D scatter plot (i.e., PCA with 2 components) where each point is colored by the class (i.e., category) to which it belongs. 
+        \item (1 point) What is the total percentage of variance captured by the first 2 components of PCA?
+        \item (1 point) What is the \emph{strength} of each of the two principal components?
+        \item (1 point) What is the magnitude of each of the two principal components?
+        \item (3 points) Please include your code, as a python3 jupyter notebook file named:
+        
+        `$<$lastname$>$\_$<$firstname$>$\_pca.ipynb'. All visualizations and answers should be printed in the notebook (in addition to including only the answers in the assignment for this question)
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Probability (50 points)}
+\begin{enumerate}
+    \setcounter{enumi}{4}
+    \item (10 points) Jane picks apples. The weight of the apples picked by Jane are normally distributed with a mean of 180g and a standard deviation of 60g. Jane does not like apples that weigh less than or equal to 100g. 
+    \begin{enumerate}
+        \item (5 points) What is the percentage of apples that Jane picks and does not like? \textbf{Hint:} Employ Z-scores and the z-table to calculate the required percentage.
+        \item (5 points) Let $q_3$ represent the minimum weight for the upper quartile (i.e., top 25\%) of weight of apples  liked by Jane. Out of all the apples liked by Jane, what is the probability that the weight of a randomly selected apple is greater than or equal to $q_3$. \textbf{Hint:} Consider the probability that Jane \emph{likes} an apple AND that the weight of the apple lies in the \emph{upper quartile} (i.e., weight $\geq q_3$)
+    \end{enumerate}
+
+    \item (10 points) A bag contains five types of balls colored red, blue, green, yellow, orange. There are 9 each of red, blue, green and yellow balls and there are 3 orange balls. We draw a ball from the bag, if the ball drawn is colored green or yellow we get \$0 payoff. If it is blue the we get a \$200 payoff. If the ball drawn is red, we get a \$300 payoff and \$500 if it is orange.
+    \begin{enumerate}
+        \item (5 points) What is our expected payoff of this experiment? \textbf{Hint:} Calculate expected value.
+        \item (5 points) What is the standard deviation and variance? \textbf{Hint:} $\sigma^2(X) = E[X^2] - (E[X])^2$
+    \end{enumerate}
+    \item (10 points) Harry is 24 years old and plans to get his driver's license. The written knowledge test Harry has to give before the driving test is multiple choice where every question has \emph{y} options. There are no negative marks for wrong answers and hence Harry chooses to guess an answer if he doesn't know the correct answer to the question. Let $x$ be the probability that he knows the answer. The probability where Harry guesses at the answer and it will be correct is $\frac{1}{y}$. What is the probability that Harry knows the correct answer to a problem given that he has answered that problem correctly.
+    (Assume that Harry does not leave any questions on the test unanswered. Also assume that for any question to which harry knows the answer, his answers will always be correct.) \textbf{Hint:} Employ Bayes rule.
+    \item (10 points) It is estimated that 40\% of emails are spam emails. Some software has been applied to filter these spam emails before they reach your inbox. A certain brand of software claims that it can detect 98\% of spam emails, and the probability for a false positive (a non-spam email detected as spam) is 5\%. Now if an email is detected as spam, then what is the probability that it is in fact a non-spam email?
+ 
+    \item (10 points) A  certain  disease  affects  about 1 out  of 10,000  people.  There  is  a  test  to  check whether the person has the disease. The test is quite accurate. In particular, we know that
+
+    \begin{itemize}
+        \item The probability that the test result is positive  (suggesting the person has the disease), given that the person does not have the disease, is only 2 percent; 
+        \item The probability that the test result is negative (suggesting the person does not have the disease), given that the person has the disease, is only 1 percent. 
+    \end{itemize}
+
+    A random person gets tested for the disease and the result is positive. What is the probability that the person has the disease?
+\end{enumerate}
+
+\section*{Differential Calculus (25 points)}
+\begin{enumerate}
+    \setcounter{enumi}{9}
+    \item (6 points) \textbf{Limit Definition} of a function $F(x)$, is given as follows.
+    \begin{equation*}
+        F(x) = \lim\limits_{h\xrightarrow[]{} 0}\frac{F(x+h) - F(x)}{h}
+    \end{equation*}
+    \begin{enumerate}
+    \item (3 points) Given a function $F(x) = \frac{f(x)}{g(x)}$ where $f(x)$ and $g(x)$ are also functions of $x$, the quotient rule of derivative of $F(x)$ (denoted $F'(x)$) is given as follows. 
+    \begin{equation*}
+        F'(x) = \frac{g(x)f'(x) - f(x)g'(x)}{[g(x)]^2}
+    \end{equation*}
+    Use the limit definition of a function to derive the quotient rule of the derivative of function $F(x)$.\vspace{2ex}
+    \item (3 points) Consider a function $f(x) = \mathrm{sin(x)}$. Show using the limit definition that $f'(x)= cos(x)$.
+\end{enumerate}
+\item (4 points) Calculate the equation of a tangent line given by a function $f(x) = x^4 + 5x^3+9x^2-3$ and report the result at $x=1$ and $y = 12$. \textbf{Hint:} Calculate slope of function and employ point slope form of a line to get the tangent equation.
+
+\item (4 points) Consider a function $f(x) = e^{2x}$ and a function $g(x) = \frac{x^2}{x-1}$. Let $F(x) = f(g(x))$, find an expression for $F'(x)$. \textbf{Hint:} Employ chain rule. Answer does not need to be simplified after FULL application of derivatives (the point is to test your application of derivatives not your algebra). Please enumerate the derivative rules you have employed.
+
+\item (6 points) Given $F(x)$ in the following problems, find the derivative $F'(x)$. \textbf{Note:} Answer does not need to be simplified after FULL application of derivatives (the point is to test your application of derivatives not your algebra). Please enumerate the derivative rules you have employed per question.
+\begin{enumerate}
+    \item (2 points) $F(x) =\frac{\sqrt{x}+2x}{7x-4x^2}$\\
+    \item (2 points) $F(x) = (1 + \sqrt{x^3})(\frac{1}{x^3} - 2\sqrt[3]{x})$\\
+    % \item (2 points) $F(x) = \mathrm{sec}^{-1}\frac{((x^3-5x^2)}{2x^2 - 1}$\\
+    \item (2 points) $F(x) = (2x^2+1)^3(3x^3-2)^2$\\
+\end{enumerate}
+\item (2 points) Calculate the partial derivatives with respect to each variable of the function $F(\cdot)$ in each of the following cases.
+\begin{enumerate}
+    \item (1 point) $F(x,y) = \frac{x^3y^2 - 2x^2 + 5y}{e^x}$\\
+    \item (1 point) $F(x,y,z) = y^2\mathrm{ln}(x+2y) -  \mathrm{ln}(3z)(x^3 + y^2 -4z)$
+\end{enumerate}
+
+\item (3 points) The table below depicts rainfall depth (mm) in New York City beginning 7 PM on Sept. $19^{th}$ 2008. \textbf{Hint:} In each of the following questions, employ numerical differentiation techniques.
+\vspace{5ex}
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c|c|c}
+         \midrule 
+         Hours after 7 PM&0&5&10&15&20&25&30\\\hline
+         \vspace{0.5ex}Rainfall Depth (mm)&100&250&300&370&325&400&450\\\bottomrule
+    \end{tabular}
+    \caption{Rainfall Depth in New York City Sept $19^{th}$ 2008, at and after 7 PM.}
+    \label{tab:rainfall_table}
+\end{table}
+\begin{enumerate}
+    \item (1 point) Use central difference to approximate the slope of rainfall depth using numerical differentiation at hour 12.5 and at hour 22.5.
+    \item (1 point) Calculate the slope of rainfall depth at hour 15 using forward numerical differentiation.
+    \item (1 point) Calculate the slope of rainfall depth at hour 15 using backward numerical differentiation.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
