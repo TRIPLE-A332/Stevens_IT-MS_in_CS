@@ -1,8 +1,8 @@
 {
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
-        "FALL_24/CS590_Algo/Project/Project1/p2.1",
+        "FALL_24/CS590_Algo/Project/Project2/CandySampler/src",
         "FALL_24/CS501_Java/Practice/PracJava/src",
-        "FALL_24/CS590_Algo/Project/Project2/CandySampler/src"
+        "FALL_24/CS501_Java/Assignments/Assignment4/src"
     ]
 }
