@@ -64,7 +64,7 @@ with q1 as --average quant of the current months
 ),
 q2 as --average quant of the previous months
 (
-	select q1.cust, q1.prod, q1.month, (avg(s.quant) prev_avg
+	select q1.cust, q1.prod, q1.month, avg(s.quant) prev_avg
 	from q1, sales as s
 	where q1.cust = s.cust and q1.prod = s.prod and q1.month - 1 = s.month
 	group by q1.cust, q1.prod, q1.month
