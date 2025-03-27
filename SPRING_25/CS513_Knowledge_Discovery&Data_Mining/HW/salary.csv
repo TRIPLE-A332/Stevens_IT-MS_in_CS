@@ -1,0 +1,12 @@
+Occupation,Gender,Age,Salary
+Service,Female,45,"$48,000"
+Service,Male,25,"$25,000"
+Service,Male,33,"$35,000"
+Management,Male,25,"$45,000"
+Management,Female,35,"$65,000"
+Management,Male,26,"$45,000"
+Management,Female,45,"$70,000"
+Sales,Female,40,"$50,000"
+Sales,Male,30,"$40,000"
+Staff,Female,50,"$40,000"
+Staff,Male,25,"$25,000"
