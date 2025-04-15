@@ -1,0 +1,8 @@
+Symptoms ,Disease_1,Disease_2,Disease_3,Disease_4,Disease_5,Disease_6,Disease_7,Disease_8,Disease_9,Disease_10,New_Patient
+Symptom_1,1,1,1,1,1,1,0,0,0,0,0
+Symptom_2,1,1,1,1,1,1,1,0,1,0,0
+Symptom_3,0,1,1,1,1,1,0,0,0,0,1
+Symptom_4,1,0,1,1,1,1,1,1,1,0,0
+Symptom_5,1,1,1,1,0,0,0,0,0,0,0
+Symptom_6,1,0,0,0,0,0,0,1,0,1,1
+Symptom_7,1,1,1,1,1,0,0,0,0,0,0
