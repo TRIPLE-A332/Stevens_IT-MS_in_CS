@@ -1,0 +1,7 @@
+cats_vs_dogs/
+__MACOSX
+data.zip
+Classwork/MOD9-RNN/aclImdb/*
+Classwork/MOD9-RNN/*
+!Classwork/MOD9-RNN/Sentiment Analysis with Logistic Regression.ipynb
+!Classwork/MOD9-RNN/Sentiment Analysis with RNN and LSTM.ipynb
