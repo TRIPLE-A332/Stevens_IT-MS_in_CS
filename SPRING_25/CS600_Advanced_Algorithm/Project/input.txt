@@ -1,0 +1,7 @@
+html_pages/page1.html
+html_pages/page2.html
+html_pages/page3.html
+https://www.gnu.org/education/education.html
+https://www.example.com/index.html
+https://www.berkshirehathaway.com/message.html
+https://en.wikipedia.org/wiki/Python_(programming_language)
