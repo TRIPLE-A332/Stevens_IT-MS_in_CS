@@ -1,0 +1,8 @@
+Recipe,Tomato,Garlic,Salt,Onion,TomatoPaste,OliveOil,Celery,Broth,GreenPepper,Cumin,Flour,BrownSugar,BayLeaf,GroundBeef,BlackPepper,ChiliPowder,Cilantro,Carrot,CayennePepper,Oregano,Oil,Parsley,PorkSausage,RedPepper,Paprika,Thyme,Tomatillo,JalapenoPepper,WorcestershireSauce,Lime,Eggplant,GreenOlives,Capers,Sugar
+Spag_Sauce,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Spag_Meat_Sauce,1,1,1,1,1,1,1,0,1,0,0,0,1,1,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0
+Eggplant_Relish,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1
+Creole_Sauce,1,0,1,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0
+Salsa,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0
+Enchilada_Sauce,1,0,0,0,0,0,0,1,0,1,1,1,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+new,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
