@@ -1,0 +1,11 @@
+EXAM
+
+BM25 and tf idf with formula 
+
+
+Lecture 5
+Rank net formula page 39
+
+Lecture 6
+EM formula (no derivation) page 29 slideshow hai aage badha lio
+should be able to calculate uing the formula

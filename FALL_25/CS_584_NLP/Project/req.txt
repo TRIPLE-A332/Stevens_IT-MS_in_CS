@@ -1,0 +1,13 @@
+# Core ML & NLP
+torch==2.4.1+cu124
+transformers==4.44.2
+datasets==3.0.1
+
+# Classical ML baseline
+scikit-learn==1.5.2
+pandas==2.2.3
+numpy==1.26.4
+joblib==1.4.2
+
+# Utilities
+tqdm==4.66.5

@@ -1,0 +1,52 @@
+01_prepare_data.py
+INFO: Loaded 1326 raw records from data/raw/youtube.jsonl
+INFO: Loaded 676 raw records from data/raw/snapchat.jsonl
+INFO: Total normalized records (pre-dedupe): 1998
+INFO: Records after dedupe: 1702
+INFO: Candidate (len_words >= 30): 1702
+INFO: Platform counts: {'YouTube': 1288, 'Snapchat': 745, 'TikTok': 848, 'Instagram': 856, 'Shorts': 10, 'Instagram Reels': 3}
+INFO: Wrote data/cleaned/news_clean.jsonl
+INFO: Wrote data/cleaned/news_clean.csv
+
+after manual cleaning only 870 records left
+
+
+LLM-ASSISTED RELEVANCE FILTERING
+======================================================================
+Reading from: data/cleaned/news_clean.jsonl
+Loaded 870 articles
+Model: facebook/bart-large-mnli
+Relevance threshold: 0.5
+
+Total articles: 870
+KEPT: 864 (99.3%)
+REJECTED: 6 (0.7%)
+
+
+MULTI-LABEL TOPIC ANNOTATION
+======================================================================
+Reading from: data/filtered/news_filtered.jsonl
+Loaded 864 articles
+Topics to classify: 33
+Topic threshold: 0.5
+Model: facebook/bart-large-mnli
+
+
+ANNOTATION COMPLETE
+======================================================================
+Total articles: 864
+Articles with topics: 861
+Articles without topics: 3
+Average topics per article: 10.56
+
+Top 10 most common topics:
+  social_media                  :  786 ( 91.0%)
+  resilience/coping             :  731 ( 84.6%)
+  screen_time                   :  709 ( 82.1%)
+  minority_youth                :  701 ( 81.1%)
+  access_to_care                :  671 ( 77.7%)
+  peer_support                  :  600 ( 69.4%)
+  family/peers                  :  595 ( 68.9%)
+  trauma/ptsd                   :  532 ( 61.6%)
+  crisis_intervention           :  400 ( 46.3%)
+  early_intervention            :  352 ( 40.7%)
