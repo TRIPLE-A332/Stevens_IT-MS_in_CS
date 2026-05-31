@@ -1,0 +1,1 @@
+git ls-files | Where-Object { $_ -match "\.vscode" } | ForEach-Object { git rm --cached $_ }
